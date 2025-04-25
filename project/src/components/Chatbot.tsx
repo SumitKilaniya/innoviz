@@ -16,10 +16,29 @@ type SuggestedQuestion = {
 
 const suggestedQuestions: SuggestedQuestion[] = [
   { id: '1', text: 'What are the latest developments in politics?' },
-  { id: '2', text: 'Give me a summary of today\'s top stories' },
-  { id: '3', text: 'What\'s happening in technology news?' },
-  { id: '4', text: 'Tell me about recent scientific breakthroughs' }
+  { id: '2', text: "Give me a summary of today's top stories" },
+  { id: '3', text: "What's happening in technology news?" },
+  { id: '4', text: 'Tell me about recent scientific breakthroughs' },
+  { id: '5', text: 'What are the recent trends in global economy?' },
+  { id: '6', text: 'Any updates on climate change?' },
+  { id: '7', text: 'What’s new in space exploration?' },
+  { id: '8', text: 'Tell me about latest discoveries in health science' },
+  { id: '9', text: 'What is the status of the Russia-Ukraine conflict?' },
+  { id: '10', text: 'Are there any new laws or regulations passed recently?' },
+  { id: '11', text: 'What’s going on in the stock market today?' },
+  { id: '12', text: 'Any celebrity news or entertainment updates?' },
+  { id: '13', text: 'How is the global job market performing?' },
+  { id: '14', text: 'Any new breakthroughs in renewable energy?' },
+  { id: '15', text: 'What’s trending on social media today?' },
+  { id: '16', text: 'Are there any new education reforms?' },
+  { id: '17', text: 'What are the current global health concerns?' },
+  { id: '18', text: 'Has there been any progress in AI development?' },
+  { id: '19', text: 'Any recent cybersecurity incidents or warnings?' },
+  { id: '20', text: 'Tell me about the latest international summit outcomes' },
+  { id: '21', text: 'What are countries doing about inflation?' },
+  { id: '22', text: 'Any updates on COVID-19 or related vaccines?' }
 ];
+
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,19 +95,52 @@ const Chatbot = () => {
     let botResponse = '';
     const lowerCaseMessage = userMessage.toLowerCase();
     
-    if (lowerCaseMessage.includes('politics') || lowerCaseMessage.includes('election')) {
-      botResponse = "Recent political developments include ongoing debates about economic policies and international relations. According to reliable sources, the upcoming election is expected to focus on healthcare reform and climate initiatives.";
-    } else if (lowerCaseMessage.includes('technology') || lowerCaseMessage.includes('tech')) {
-      botResponse = "The technology sector is seeing significant advancements in artificial intelligence and quantum computing. Major tech companies have announced new initiatives to address privacy concerns and ethical AI development.";
-    } else if (lowerCaseMessage.includes('science') || lowerCaseMessage.includes('research')) {
-      botResponse = "Recent scientific breakthroughs include promising results in cancer treatment research and renewable energy technologies. A peer-reviewed study published last week revealed new insights into climate change mitigation strategies.";
-    } else if (lowerCaseMessage.includes('health') || lowerCaseMessage.includes('medical')) {
-      botResponse = "Health experts are reporting progress in vaccine development for several diseases. New public health guidelines emphasize preventative care and mental health awareness, based on extensive clinical research.";
-    } else if (lowerCaseMessage.includes('today') || lowerCaseMessage.includes('latest')) {
-      botResponse = "Today's top stories include diplomatic talks between major nations, breakthroughs in sustainable technology, and updates on global health initiatives. All information has been verified through multiple reliable sources.";
-    } else {
-      botResponse = "That's an interesting topic. Based on verified sources, this area has seen significant developments recently. Would you like me to provide more specific information or focus on particular aspects of this subject?";
-    }
+   if (lowerCaseMessage.includes('politics') || lowerCaseMessage.includes('election')) {
+  botResponse = "Recent political developments include ongoing debates about economic policies and international relations...";
+} else if (lowerCaseMessage.includes('technology') || lowerCaseMessage.includes('tech')) {
+  botResponse = "The technology sector is seeing significant advancements in AI and quantum computing...";
+} else if (lowerCaseMessage.includes('science') || lowerCaseMessage.includes('research')) {
+  botResponse = "Recent scientific breakthroughs include promising results in cancer treatment and renewable energy...";
+} else if (lowerCaseMessage.includes('health') || lowerCaseMessage.includes('medical')) {
+  botResponse = "Health experts are reporting progress in vaccine development for several diseases...";
+} else if (lowerCaseMessage.includes('today') || lowerCaseMessage.includes('latest')) {
+  botResponse = "Today's top stories include diplomatic talks, breakthroughs in technology, and global health updates...";
+} else if (lowerCaseMessage.includes('economy')) {
+  botResponse = "Global economic trends show a gradual recovery with varying inflation rates and interest rate policies...";
+} else if (lowerCaseMessage.includes('climate')) {
+  botResponse = "Climate change discussions focus on carbon neutrality goals and green energy transitions across nations...";
+} else if (lowerCaseMessage.includes('space')) {
+  botResponse = "NASA and SpaceX continue exploration missions, with plans for lunar bases and Mars studies gaining traction...";
+} else if (lowerCaseMessage.includes('ukraine') || lowerCaseMessage.includes('russia')) {
+  botResponse = "The conflict continues with negotiations and sanctions, and humanitarian efforts are ongoing in the region...";
+} else if (lowerCaseMessage.includes('laws') || lowerCaseMessage.includes('regulations')) {
+  botResponse = "Several new laws have been passed, focusing on data privacy, AI governance, and environmental protections...";
+} else if (lowerCaseMessage.includes('stock')) {
+  botResponse = "Stock markets are fluctuating due to earnings reports and interest rate speculation. Analysts expect volatility...";
+} else if (lowerCaseMessage.includes('celebrity') || lowerCaseMessage.includes('entertainment')) {
+  botResponse = "Celebrity news includes major film releases, award winners, and philanthropic efforts by public figures...";
+} else if (lowerCaseMessage.includes('job') || lowerCaseMessage.includes('employment')) {
+  botResponse = "Global job markets show steady recovery with tech and healthcare sectors leading in employment opportunities...";
+} else if (lowerCaseMessage.includes('renewable')) {
+  botResponse = "Renewable energy breakthroughs include more efficient solar panels and better energy storage technologies...";
+} else if (lowerCaseMessage.includes('social media')) {
+  botResponse = "Trending on social media are conversations about global protests, new challenges, and viral entertainment clips...";
+} else if (lowerCaseMessage.includes('education')) {
+  botResponse = "Education reforms are underway to integrate digital tools, AI-assisted learning, and revised curricula...";
+} else if (lowerCaseMessage.includes('covid')) {
+  botResponse = "COVID-19 cases remain stable in most regions, with ongoing vaccine development for emerging variants...";
+} else if (lowerCaseMessage.includes('ai') || lowerCaseMessage.includes('artificial intelligence')) {
+  botResponse = "AI is rapidly advancing with generative models, ethical frameworks, and real-world applications expanding...";
+} else if (lowerCaseMessage.includes('cyber') || lowerCaseMessage.includes('hacking')) {
+  botResponse = "Cybersecurity incidents are increasing, prompting stronger data protection laws and global coordination...";
+} else if (lowerCaseMessage.includes('summit') || lowerCaseMessage.includes('international meeting')) {
+  botResponse = "Recent summits discussed trade policies, climate action, and cooperative strategies for global challenges...";
+} else if (lowerCaseMessage.includes('inflation')) {
+  botResponse = "Nations are adjusting interest rates and subsidies to combat inflation and stabilize consumer prices...";
+} else {
+  botResponse = "That's an interesting topic. Based on verified sources, this area has seen significant developments recently...";
+}
+
     
     const botMessage: Message = {
       id: Date.now().toString(),
